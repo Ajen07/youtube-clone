@@ -1,8 +1,13 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# YouTube Clone 
 
-Currently, two official plugins are available:
+##### Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Introduction
+
+This project is a YouTube clone built using React for the frontend and Rapid API to access and manage data. It provides users with the ability to view and upload videos, comment, like, and subscribe to channels.
+
+<img src="./src/assets/homepage.png" alt="Website Overview" />
+
+

@@ -18,17 +18,17 @@ const VideoDetail = () => {
   useEffect(() => {
     fetchFromApi(`video?id=${id}`).then((data) => {
       setVideoDetail(data);
-      console.log(data);
     });
     fetchFromApi(`related?id=${id}`).then((data) => setVideos(data.data));
     fetchFromApi(`comments?id=${id}`).then((data) => {
-      console.log(data.data);
-      setComments(data.data)});
+      setComments(data.data);
+    });
   }, [id]);
 
   if (!videoDetail || !comments) return <h1>Loading</h1>;
 
-  const { title, channelId, channelTitle, viewCount, description, uploadDate } =videoDetail;
+  const { title, channelId, channelTitle, viewCount, description, uploadDate } =
+    videoDetail;
   const calDate = (uploadDate) => {
     const presentDate = new Date();
     const presentDay = presentDate.getDate();

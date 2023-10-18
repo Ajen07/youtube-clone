@@ -8,11 +8,14 @@ import { Videos } from "./";
 const SearchFeed = () => {
   const [videos, setVideos] = useState(null);
   const { searchTerm } = useParams();
+  console.log(searchTerm);
 
   useEffect(() => {
-    fetchFromApi(`search?part=snippet&q=${searchTerm}`).then((data) =>
-      setVideos(data.items)
-    );
+    if (searchTerm) {
+      fetchFromApi(`search?part=snippet&query=${searchTerm}`).then((data) => {
+        setVideos(data.data);
+      });
+    }
   }, [searchTerm]);
 
   return (
